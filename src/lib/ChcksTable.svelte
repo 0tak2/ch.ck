@@ -2,7 +2,7 @@
     import { liveQuery } from "dexie";
     import { db } from "$lib/utils/dbHelper";
     import { goto } from '$app/navigation';
-    import { toTimestring } from '$lib/utils/dateHelper.js'
+    import { toTimestring } from '$lib/utils/dateHelper'
     
     let noChck = false;
 

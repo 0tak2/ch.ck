@@ -1,6 +1,6 @@
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
-    import type { Section } from '$lib/utils/types.js';
+    import type { Section } from '$lib/utils/types';
     export let contents: Section[];
 
     const dispatch = createEventDispatcher<{updated_chck: {  contents: Section[] } }>();

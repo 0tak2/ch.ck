@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Template } from '$lib/utils/types.js';
+    import type { Template } from '$lib/utils/types';
     import SelectTemplateCard from '$lib/SelectTemplateCard.svelte';
     
     export let templates: Template[];

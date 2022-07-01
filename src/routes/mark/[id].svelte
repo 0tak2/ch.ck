@@ -2,8 +2,8 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
     import { liveQuery } from "dexie";
-    import { db } from '$lib/utils/dbHelper.js';
-    import type { Section } from '$lib/utils/types.js';
+    import { db } from '$lib/utils/dbHelper';
+    import type { Section } from '$lib/utils/types';
     import ChckMarkboard from '$lib/ChckMarkboard.svelte';
     
     let id = Number($page.params.id)

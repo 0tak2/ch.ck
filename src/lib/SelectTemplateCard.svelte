@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { Template } from '$lib/utils/types.js';
-    import { db } from '$lib/utils/dbHelper.js';
+    import type { Template } from '$lib/utils/types';
+    import { db } from '$lib/utils/dbHelper';
     import { goto } from '$app/navigation';
     
     export let item: Template;

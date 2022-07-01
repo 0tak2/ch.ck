@@ -1,6 +1,6 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import type { Section } from '$lib/utils/types.js';
+    import type { Section } from '$lib/utils/types';
     export let contents: Section[];
     export let id: Number;
 
