@@ -1,38 +1,12 @@
-# create-svelte
+# ch.ck 체·크
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+제공된 체크리스트 템플릿에 이용해, 자유롭게 체크리스트를 기록하고, 본인의 디바이스에 데이터를 저장할 수 있습니다.
+데이터는 웹브라우저의 IndexedDB에 저장됩니다.
 
-## Creating a project
+## 데모 실행 방법
+1. 저장소를 클론한 뒤, npm install
+1. /lib/templates/templates.template.ts를 자신이 원하는 대로 수정하고 /lib/templates/templates.ts로 이름 변경
+1. npm run dev
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 버전 히스토리
+0.9.0 2122.7.1
