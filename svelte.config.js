@@ -1,7 +1,9 @@
 import adapter from '@sveltejs/adapter-netlify';
+import preprocess from 'svelte-preprocess';
 
 export default {
   kit: {
+	preprocess: preprocess(),
     // default options are shown
     adapter: adapter({
       // if true, will create a Netlify Edge Function rather
