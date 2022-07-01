@@ -1,6 +1,4 @@
 /node_modules/
 /public/build/
 
-*/templates.ts
-
 .DS_Store
