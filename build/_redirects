@@ -1,3 +1,18 @@
 
 
 * /.netlify/functions/render 200
+
+/ /.netlify/functions/index 200
+//__data.json /.netlify/functions/index 200
+/help /.netlify/functions/help 200
+/help/__data.json /.netlify/functions/help 200
+/mark /.netlify/functions/mark 200
+/mark/__data.json /.netlify/functions/mark 200
+/new /.netlify/functions/new 200
+/new/__data.json /.netlify/functions/new 200
+/view /.netlify/functions/view 200
+/view/__data.json /.netlify/functions/view 200
+/mark/:1 /.netlify/functions/mark-_1 200
+/mark/:1/__data.json /.netlify/functions/mark-_1 200
+/view/:1 /.netlify/functions/view-_1 200
+/view/:1/__data.json /.netlify/functions/view-_1 200
