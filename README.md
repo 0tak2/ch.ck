@@ -5,7 +5,7 @@
 
 ## 데모 실행 방법
 1. 저장소를 클론한 뒤, npm install
-1. /lib/templates/templates.template.ts를 자신이 원하는 대로 수정하고 /lib/templates/templates.ts로 이름 변경
+1. /src/lib/templates/templates.template.ts를 자신이 원하는 대로 수정하고 /lib/templates/templates.ts로 이름 변경
 1. npm run dev
 
 ## 버전 히스토리

@@ -1,6 +1,6 @@
 /node_modules/
 /public/build/
 
-/lib/src/templates/tmeplates.ts
+/src/lib/templates/tmeplates.ts
 
 .DS_Store
