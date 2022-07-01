@@ -5,6 +5,8 @@
     
     export let item: Template;
 
+    let previewShow = false;
+
     async function handleButton() {
         let gotoId = '';
         try {
@@ -23,6 +25,10 @@
         }
         goto('/mark/' + gotoId);
     }
+
+    function handlePreview() {
+        previewShow = !previewShow;
+    }
 </script>
 
 <div class="card">
@@ -35,13 +41,31 @@
     <div class="version">버전 {item.version.toFixed(1)}</div>
 
     <div class="button_container"><button on:click={handleButton}>이 템플릿 선택</button></div>
+    <div class="button_container"><button class="secondary" on:click={handlePreview}>템플릿 미리보기</button></div>
+
+    {#if previewShow}
+        <div class="preview_panel">
+            {#each item.contents as section, i}
+                <div><strong>{i + 1}. {section.sectionTitle}</strong></div>
+                <div>
+                    {#each section.items as sectionItem, j}
+                        {#if (j+1)===section.items.length}
+                            {sectionItem.entry}
+                        {:else}
+                            {sectionItem.entry} ·&nbsp;
+                        {/if}
+                    {/each}
+                </div>
+            {/each}
+        </div>
+    {/if}
 </div>
 
 <style>
     .card {
         padding: 10px;
         margin-top: 2rem;
-        border: 1px solid black;
+        border: 1px dotted black;
         width: 600px;
     }
 
@@ -53,10 +77,22 @@
 
     .button_container {
         text-align: center;
+        margin: 0.3rem;
     }
 
     button {
         color: var(--accent-color);
+    }
+
+    button.secondary {
+        color: var(--secondary-color);
+    }
+
+    .preview_panel {
+        padding: 15px;
+        margin: 15px;
+        border: 1px solid var(--accent-color);
+        font-size: small;
     }
 
 	@media (max-width: 480px) {

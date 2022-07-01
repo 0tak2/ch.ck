@@ -5,7 +5,7 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--pure-white: #ffffff;
 	--primary-color: #b0d351;
-	--secondary-color: #898b00;
+	--secondary-color: #6d5514;
 	--tertiary-color: #edf0f8;
 	--accent-color: rgb(97, 133, 0);
 	--heading-color: rgba(0, 0, 0, 0.7);
@@ -69,6 +69,15 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
+}
+
+.page_title {
+	margin: 1rem;
+	padding: 1rem;
+	font-size: x-large;
+	font-weight: 700;
+	text-decoration: overline;
+	color: var(--accent-color);
 }
 
 @media (min-width: 720px) {

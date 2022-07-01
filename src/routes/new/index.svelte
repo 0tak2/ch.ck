@@ -1,149 +1,16 @@
 <script lang="ts">
     import SelectTemplate from '$lib/SelectTemplate.svelte'
-    const templates = [
-        {
-            id: "kimch1",
-            title: "어린이 김치학교",
-            description: "프로그램 진행 전, 후 점검사항 체크리스트",
-            version: 1.0,
-            contents: [
-                {
-                    sectionTitle: "시작 전 점검사항",
-                    items: [
-                        {
-                            entry: "점검사항 1",
-                            detail: "점검사항 1 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 2",
-                            detail: "점검사항 2 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 3",
-                            detail: "점검사항 3 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 4",
-                            detail: "점검사항 4 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 5",
-                            detail: "점검사항 5 부가설명",
-                            done: false
-                        }
-                    ]
-                },
-                {
-                    sectionTitle: "종료 후 점검사항",
-                    items: [
-                        {
-                            entry: "점검사항 1",
-                            detail: "점검사항 1 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 2",
-                            detail: "점검사항 2 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 3",
-                            detail: "점검사항 3 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 4",
-                            detail: "점검사항 4 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 5",
-                            detail: "점검사항 5 부가설명",
-                            done: false
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            id: "kimch2",
-            title: "어린이 김치학교 2",
-            description: "프로그램 진행 전, 후 점검사항 체크리스트",
-            version: 1.2,
-            contents: [
-                {
-                    sectionTitle: "시작 전 점검사항",
-                    items: [
-                        {
-                            entry: "점검사항 1",
-                            detail: "점검사항 1 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 2",
-                            detail: "점검사항 2 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 3",
-                            detail: "점검사항 3 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 4",
-                            detail: "점검사항 4 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 5",
-                            detail: "점검사항 5 부가설명",
-                            done: false
-                        }
-                    ]
-                },
-                {
-                    sectionTitle: "종료 후 점검사항",
-                    items: [
-                        {
-                            entry: "점검사항 1",
-                            detail: "점검사항 1 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 2",
-                            detail: "점검사항 2 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 3",
-                            detail: "점검사항 3 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 4",
-                            detail: "점검사항 4 부가설명",
-                            done: false
-                        },
-                        {
-                            entry: "점검사항 5",
-                            detail: "점검사항 5 부가설명",
-                            done: false
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    import { templates } from '$lib/templates/templates.js'
 </script>
 
 <svelte:head>
-	<title>새로운 체크리스트 만들기</title>
+	<title>ch.ck: 새로운 체크리스트</title>
 </svelte:head>
 
+<div class="page_title">새로운 체크리스트 생성</div>
+
 <div class="new">
-    <SelectTemplate templates={templates} />
+    {#if templates}
+        <SelectTemplate templates={templates} />
+    {/if}
 </div>

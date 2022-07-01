@@ -1,12 +1,15 @@
 <svelte:head>
-	<title>도움말</title>
+	<title>ch.ck: 도움말</title>
 </svelte:head>
 
-<div class="todos">
-	<h1>도움말</h1>
+<div class="page_title">도움말</div>
+<main>
+
+	
+
 
 	추후 추가
-</div>
+</main>
 
 <style>
 </style>

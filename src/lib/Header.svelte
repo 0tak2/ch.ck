@@ -20,8 +20,8 @@
 			<li class:active={$page.url.pathname === '/view'}>
 				<a sveltekit:prefetch href="/view">저장된 체·크</a>
 			</li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">도움말</a>
+			<li class:active={$page.url.pathname === '/help'}>
+				<a sveltekit:prefetch href="/help">도움말</a>
 			</li>
 		</ul>
 	</nav>
@@ -35,6 +35,7 @@
 	header {
 		display: flex;
 		justify-content: space-around;
+		background:rgba(255, 255, 255, 1);
 	}
 
 	.corner {
@@ -105,7 +106,7 @@
 
 	.app_title {
 			font-size: xx-large;
-			font-weight: 800;
+			font-weight: 700;
 			font-family: 'Gowun Batang', serif;
 	}
 
@@ -127,16 +128,9 @@
 		header {
 			width: auto;
 		}
-	}
 
-	@media (max-width: 350px) {
-		.corner {
+		.corner:nth-of-type(2) { 
 			display: none;
-		}
-
-		nav a {
-			font-size: 0.6rem;
-			white-space: nowrap;
 		}
 	}
 </style>

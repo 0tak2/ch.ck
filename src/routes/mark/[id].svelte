@@ -52,9 +52,10 @@
 </script>
 
 <svelte:head>
-	<title>체크리스트 기록하기</title>
+	<title>ch.ck: 체크리스트 기록</title>
 </svelte:head>
 
+<div class="page_title">체크리스트 기록</div>
 <div>
     {#if $chcks}
       {#each $chcks as chck}
@@ -69,6 +70,7 @@
 <style>
     h1 {
         font-weight: 700;
+        font-size: x-large;
     }
 
     .date {

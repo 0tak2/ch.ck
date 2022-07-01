@@ -6,17 +6,22 @@
     
     let noChck = false;
 
+    let dateRaw = new Date();
+    let timeString = dateRaw.getFullYear() + "년 " + (dateRaw.getMonth() + 1) + "월 " + dateRaw.getDate() + "일 "
+            + dateRaw.getHours() + "시 " + dateRaw.getMinutes() + "분";
+
+    let startDate = new Date(dateRaw.getFullYear(), dateRaw.getMonth(), dateRaw.getDate(), 0, 0);
+    let endDate = new Date(dateRaw.getFullYear(), dateRaw.getMonth(), dateRaw.getDate()+1, 0, 0);
     $: chcks = liveQuery(async () => {
-        try {
-            const chcks = await db.chcks.toArray();
-            if (chcks.length === 0) {
-                noChck = true
-            }
-            return chcks;
-        } catch(error) {
-            console.error("[dexie] 오류 발생" + error);
+        const chcks = await db.chcks
+            .where('modifiedAt')
+            .between(startDate, endDate)
+            .toArray();
+
+        if (chcks.length === 0) {
             noChck = true
         }
+        return chcks;
     });
 
     function handleEdit(id: Number) {
@@ -45,13 +50,25 @@
             alert("오류가 발생했습니다. 문제가 지속되면 관리자에게 문의하십시오.");
         }
     }
+
+    function handleAdd() {
+        goto('/new');
+    }
 </script>
 
 <svelte:head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </svelte:head>
 
+<div class="page_title">
+    {timeString}의 체·크리스트
+</div>
 <div class="container">
+    {#if noChck}
+        <div class="row">
+            오늘 생성된 체크리스트가 없습니다.
+        </div>
+    {/if}
     {#if $chcks}
       {#each $chcks as chck}
         <div class="row">
@@ -70,13 +87,13 @@
             </button>
         </div>
       {/each}
+        <div class="add" on:click={handleAdd}>
+            <span class="material-symbols-outlined">
+                add
+            </span>
+            새로운 체크리스트 추가
+        </div>
     {/if}
-
-    {#if noChck}
-        저장된 체크리스트가 없습니다.
-        <a sveltekit:prefetch href="/new">새로운 체크리스트를 만들어보세요.</a>
-    {/if}
-
 </div>
 
 <style>
@@ -96,6 +113,18 @@
 		flex: 1;
         margin-top: 0.7rem;
         margin-bottom: 0.7rem;
+    }
+
+    .add {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+		align-items: center;
+		flex: 1;
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem;
+        color: var(--secondary-color);
+        cursor: pointer;
     }
 
     .cell {

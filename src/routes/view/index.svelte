@@ -3,8 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>저장된 체크리스트 보기</title>
+	<title>ch.ck: 저장된 체크리스트 목록</title>
 </svelte:head>
+
+<div class="page_title">저장된 체크리스트 목록</div>
 
 <div class="view">
     <ChcksTable />

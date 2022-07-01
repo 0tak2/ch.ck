@@ -75,6 +75,9 @@
 
 <style>
     .container {
+        border: 1px dotted black;
+        margin: 1rem;
+        padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		flex: 1;

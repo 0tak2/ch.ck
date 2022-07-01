@@ -8,7 +8,7 @@ export class SubClassedDexie extends Dexie {
   constructor() {
     super('chcks');
     this.version(1).stores({
-      chcks: '++id, templateId, createdAt, title'
+      chcks: '++id, templateId, createdAt, modifiedAt, title'
     });
   }
 }
