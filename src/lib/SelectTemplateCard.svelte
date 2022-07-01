@@ -100,7 +100,7 @@
             font-size: large;
         }
 		.card {
-			width: auto;
+			width: 85vw;
 		}
 	}
 </style>

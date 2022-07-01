@@ -58,7 +58,7 @@
                     <span class="material-symbols-outlined icon" on:click={() => toggleDetail(i, j)}>info</span>
                     {#if detailIndex.section === i && detailIndex.entry === j}
                         <div class="detail_panel">
-                            {contents[i].items[j].detail}
+                            {@html contents[i].items[j].detail}
                         </div>
                     {/if}
                 </div>
@@ -94,7 +94,6 @@
     }
 
     .section {
-        width: 500px;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
