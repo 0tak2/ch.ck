@@ -1,6 +1,8 @@
 <script lang="ts">
     import SelectTemplate from '$lib/SelectTemplate.svelte'
-    import { templates } from '$lib/templates/templates.js'
+    import { getTemplates } from '$lib/templates/templates.js'
+
+    const templates = getTemplates();
 </script>
 
 <svelte:head>

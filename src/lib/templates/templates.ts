@@ -146,3 +146,7 @@ export const templates = [
         ]
     }
 ]
+
+export function getTemplates() {
+    return templates;
+}

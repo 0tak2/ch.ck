@@ -1,21 +1,43 @@
-import { c as create_ssr_component, e as escape, b as each, v as validate_component } from "../../../chunks/index-58de3ccc.js";
-import "../../../chunks/dbHelper-433da368.js";
-import "dexie";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var stdin_exports = {};
+__export(stdin_exports, {
+  default: () => New
+});
+module.exports = __toCommonJS(stdin_exports);
+var import_index_58de3ccc = require("../../../chunks/index-58de3ccc.js");
+var import_dbHelper_433da368 = require("../../../chunks/dbHelper-433da368.js");
+var import_dexie = require("dexie");
 var SelectTemplateCard_svelte_svelte_type_style_lang = /* @__PURE__ */ (() => ".card.svelte-2k18rj{padding:10px;margin-top:2rem;border:1px dotted black;width:600px}.title.svelte-2k18rj{font-weight:700;font-size:x-large;margin-bottom:0.5rem}.button_container.svelte-2k18rj{text-align:center;margin:0.3rem}button.svelte-2k18rj{color:var(--accent-color)}button.secondary.svelte-2k18rj{color:var(--secondary-color)}.preview_panel.svelte-2k18rj{padding:15px;margin:15px;border:1px solid var(--accent-color);font-size:small}@media(max-width: 480px){.title.svelte-2k18rj{font-size:large}.card.svelte-2k18rj{width:85vw}}")();
 const css$1 = {
   code: ".card.svelte-2k18rj{padding:10px;margin-top:2rem;border:1px dotted black;width:600px}.title.svelte-2k18rj{font-weight:700;font-size:x-large;margin-bottom:0.5rem}.button_container.svelte-2k18rj{text-align:center;margin:0.3rem}button.svelte-2k18rj{color:var(--accent-color)}button.secondary.svelte-2k18rj{color:var(--secondary-color)}.preview_panel.svelte-2k18rj{padding:15px;margin:15px;border:1px solid var(--accent-color);font-size:small}@media(max-width: 480px){.title.svelte-2k18rj{font-size:large}.card.svelte-2k18rj{width:85vw}}",
   map: null
 };
-const SelectTemplateCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const SelectTemplateCard = (0, import_index_58de3ccc.c)(($$result, $$props, $$bindings, slots) => {
   let { item } = $$props;
   if ($$props.item === void 0 && $$bindings.item && item !== void 0)
     $$bindings.item(item);
   $$result.css.add(css$1);
-  return `<div class="${"card svelte-2k18rj"}"><div class="${"title svelte-2k18rj"}">${escape(item.title)}</div>
+  return `<div class="${"card svelte-2k18rj"}"><div class="${"title svelte-2k18rj"}">${(0, import_index_58de3ccc.e)(item.title)}</div>
 
-    ${item.description != null ? `<div class="${"description"}">${escape(item.description)}</div>` : ``}
+    ${item.description != null ? `<div class="${"description"}">${(0, import_index_58de3ccc.e)(item.description)}</div>` : ``}
 
-    <div class="${"version"}">\uBC84\uC804 ${escape(item.version.toFixed(1))}</div>
+    <div class="${"version"}">\uBC84\uC804 ${(0, import_index_58de3ccc.e)(item.version.toFixed(1))}</div>
 
     <div class="${"button_container svelte-2k18rj"}"><button class="${"svelte-2k18rj"}">\uC774 \uD15C\uD50C\uB9BF \uC120\uD0DD</button></div>
     <div class="${"button_container svelte-2k18rj"}"><button class="${"secondary svelte-2k18rj"}">\uD15C\uD50C\uB9BF \uBBF8\uB9AC\uBCF4\uAE30</button></div>
@@ -28,13 +50,13 @@ const css = {
   code: ".container.svelte-600438{display:flex;flex-direction:column;flex:1;justify-content:center;align-items:center;flex:1}",
   map: null
 };
-const SelectTemplate = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const SelectTemplate = (0, import_index_58de3ccc.c)(($$result, $$props, $$bindings, slots) => {
   let { templates: templates2 } = $$props;
   if ($$props.templates === void 0 && $$bindings.templates && templates2 !== void 0)
     $$bindings.templates(templates2);
   $$result.css.add(css);
-  return `<div class="${"container svelte-600438"}">${each(templates2, (item) => {
-    return `<div class="${"card"}">${validate_component(SelectTemplateCard, "SelectTemplateCard").$$render($$result, { item }, {}, {})}
+  return `<div class="${"container svelte-600438"}">${(0, import_index_58de3ccc.b)(templates2, (item) => {
+    return `<div class="${"card"}">${(0, import_index_58de3ccc.v)(SelectTemplateCard, "SelectTemplateCard").$$render($$result, { item }, {}, {})}
         </div>`;
   })}
 </div>`;
@@ -190,12 +212,11 @@ const templates = [
 function getTemplates() {
   return templates;
 }
-const New = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const New = (0, import_index_58de3ccc.c)(($$result, $$props, $$bindings, slots) => {
   const templates2 = getTemplates();
   return `${$$result.head += `${$$result.title = `<title>ch.ck: \uC0C8\uB85C\uC6B4 \uCCB4\uD06C\uB9AC\uC2A4\uD2B8</title>`, ""}`, ""}
 
 <div class="${"page_title"}">\uC0C8\uB85C\uC6B4 \uCCB4\uD06C\uB9AC\uC2A4\uD2B8 \uC0DD\uC131</div>
 
-<div class="${"new"}">${templates2 ? `${validate_component(SelectTemplate, "SelectTemplate").$$render($$result, { templates: templates2 }, {}, {})}` : ``}</div>`;
+<div class="${"new"}">${templates2 ? `${(0, import_index_58de3ccc.v)(SelectTemplate, "SelectTemplate").$$render($$result, { templates: templates2 }, {}, {})}` : ``}</div>`;
 });
-export { New as default };

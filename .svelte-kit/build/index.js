@@ -44,7 +44,7 @@ export class Server {
 			hooks: null,
 			hydrate: true,
 			manifest,
-			method_override: {"parameter":"_method","allowed":["PATCH","DELETE"]},
+			method_override: {"parameter":"_method","allowed":[]},
 			paths: { base, assets },
 			prefix: assets + '/_app/immutable/',
 			prerender: {

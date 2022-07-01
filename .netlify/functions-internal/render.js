@@ -1,19 +1,21 @@
-export const manifest = {
+const { init } = require('../serverless.js');
+
+exports.handler = init({
 	appDir: "_app",
 	assets: new Set(["favicon.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
 	_: {
 		entry: {"file":"start-103c5ad0.js","js":["start-103c5ad0.js","chunks/index-e5d6a794.js","chunks/singletons-d1fb5791.js"],"css":[]},
 		nodes: [
-			() => import('./nodes/0.js'),
-			() => import('./nodes/1.js'),
-			() => import('./nodes/3.js'),
-			() => import('./nodes/2.js'),
-			() => import('./nodes/5.js'),
-			() => import('./nodes/6.js'),
-			() => import('./nodes/8.js'),
-			() => import('./nodes/4.js'),
-			() => import('./nodes/7.js')
+			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/3.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/2.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/5.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/6.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/8.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/4.js')),
+			() => Promise.resolve().then(() => require('../server/nodes/7.js'))
 		],
 		routes: [
 			{
@@ -99,4 +101,4 @@ export const manifest = {
 			return {  };
 		}
 	}
-};
+});
